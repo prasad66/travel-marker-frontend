@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import RoomIcon from '@mui/icons-material/Room';
@@ -36,6 +35,7 @@ function App() {
 
     try {
       const response = await axios.get('/pins');
+      console.log(response.data)
       setPins(response.data);
     } catch (error) {
       console.log(error);
@@ -76,6 +76,7 @@ function App() {
 
     try {
       const response = await axios.post('/pins', newPin);
+      console.log(response.data)
       setPins([...pins, response.data]);
       setNewPlace(null);
       setTitle(null);
