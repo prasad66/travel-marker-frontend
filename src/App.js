@@ -11,6 +11,8 @@ import Login from './components/Login';
 
 function App() {
 
+  console.log(process.env.REACT_APP_MAPBOX)
+
   const myStorage = window.localStorage;
 
   const [currentUser, setCurrentUser] = useState(null);
