@@ -36,7 +36,6 @@ function App() {
 
     try {
       const response = await axios.get('/pins');
-      console.log(response.data)
       setPins(response.data);
     } catch (error) {
       console.log(error);
@@ -77,7 +76,6 @@ function App() {
 
     try {
       const response = await axios.post('/pins', newPin);
-      console.log(response.data)
       setPins([...pins, response.data]);
       setNewPlace(null);
       setTitle(null);
