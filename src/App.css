@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  width: 250px;
+  height: 250px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+}
+
+label {
+  width: max-content;
+  color: tomato;
+  font-size: 13px;
+  border-bottom: 0.5px solid tomato;
+  margin: 3px 0;
+}
+
+.desc {
+  font-size: 14px;
+}
+
+.star {
+  color: gold;
+}
+
+.username {
+  font-size: 14px;
+}
+
+.date {
+  font-size: 13px;
+}
+
+form {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder,
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: rgb(171, 166, 166);
+}
+
+.submitButton {
+  border: none;
+  background-color: tomato;
   color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.logout {
+  background-color: tomato;
+}
+.login {
+  background-color: teal;
+  margin-right: 5px;
+}
+.register {
+  background-color: slateblue;
+}
+
+.logout:active {
+  background-color: rgb(216, 83, 60);
+}
+.login:active {
+  background-color: rgb(6, 90, 90);
+}
+.register:active {
+  background-color: rgb(55, 46, 113);
+}
+
+
+
+.buttons,
+.logout {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
