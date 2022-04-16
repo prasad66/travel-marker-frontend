@@ -4,7 +4,7 @@ import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import RoomIcon from '@mui/icons-material/Room';
 import StarIcon from '@mui/icons-material/Star';
 import axios from 'axios';
-import { format } from 'timeago.js';
+import { format  } from 'timeago.js';
 import './App.css';
 import Register from './components/Register';
 import Login from './components/Login';
@@ -37,7 +37,7 @@ function App() {
   const getPins = async () => {
 
     try {
-      const response = await axios.get('/pins');
+      const response = await axios.get('https://trvl-mrkr.herokuapp.com/api/pins');
       console.log(response.data)
       setPins(response.data);
     } catch (error) {
@@ -78,7 +78,7 @@ function App() {
     }
 
     try {
-      const response = await axios.post('/pins', newPin);
+      const response = await axios.post('https://trvl-mrkr.herokuapp.com/api/pins', newPin);
       console.log(response.data)
       setPins([...pins, response.data]);
       setNewPlace(null);

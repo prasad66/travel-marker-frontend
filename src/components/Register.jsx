@@ -23,7 +23,7 @@ const Register = ({ show }) => {
 
         try {
 
-            await axios.post('/users/register', newUser);
+            await axios.post('https://trvl-mrkr.herokuapp.com/api/users/register', newUser);
             setError(false);
             setSuccess(true);
 
