@@ -20,7 +20,7 @@ const Login = ({ show, myStorage,setCurrentUser }) => {
 
     try {
 
-      const response = await axios.post('https://trvl-mrkr.herokuapp.com/api/users/login', user);
+      const response = await axios.post('https://trvl-mkr.herokuapp.com/api/users/login', user);
       myStorage.setItem("user", response.data.username);
       setCurrentUser(response.data.username);
       show(false);
